@@ -5,7 +5,11 @@
 //  Copyright (c) 2015 Rambler DS. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#elif TARGET_OS_MAC
+#import <AppKit/AppKit.h>
+#endif
 
 @class RamblerViperOpenModulePromise;
 @protocol RamblerViperModuleInput;

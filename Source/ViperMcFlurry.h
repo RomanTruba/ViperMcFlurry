@@ -13,7 +13,7 @@
 #import "RamblerViperModuleOutput.h"
 #import "RamblerViperModuleTransitionHandlerProtocol.h"
 #import "RamblerViperOpenModulePromise.h"
-#import "UIViewController+RamblerViperModuleTransitionHandlerProtocol.h"
+#import "ViewController+RamblerViperModuleTransitionHandlerProtocol.h"
 #import "RamblerViperModuleFactory.h"
 
 #endif

@@ -2,8 +2,7 @@ source 'https://github.com/cocoapods/Specs.git'
 
 inhibit_all_warnings!
 use_frameworks!
-
-platform :ios, '8.0'
+platform :osx, '10.8'
 
 def appPods
     pod "ViperMcFlurry", :path => "../ViperMcFlurry.podspec"
@@ -15,5 +14,10 @@ target 'ViperMcFlurry_Example' do
 end
 
 target 'ViperMcFlurry_Tests' do
+    #platform :ios, '8.0'
+    appPods
+end
+
+target 'OsxExample' do
     appPods
 end

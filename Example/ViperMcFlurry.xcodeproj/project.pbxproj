@@ -32,11 +32,16 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		8321768C401D17B3ACF20E00 /* Pods_OsxExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE1F092057B409DD06F7EF6 /* Pods_OsxExample.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C2C905018238A19115ED6AC6 /* Pods_ViperMcFlurry_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8284984F2455D95519E1A3D9 /* Pods_ViperMcFlurry_Example.framework */; };
 		D24D49021BD1049400C77475 /* RamblerModuleBetaModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D24D49011BD1049400C77475 /* RamblerModuleBetaModuleAssembly.m */; };
 		D24D49051BD1049E00C77475 /* RamblerModuleAlphaModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D24D49041BD1049E00C77475 /* RamblerModuleAlphaModuleAssembly.m */; };
 		D24D49071BD4C9ED00C77475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24D49061BD4C9ED00C77475 /* LaunchScreen.storyboard */; };
+		F3EE70401E55BCC70093FAEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE703F1E55BCC70093FAEC /* AppDelegate.m */; };
+		F3EE70431E55BCC70093FAEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EE70421E55BCC70093FAEC /* main.m */; };
+		F3EE70451E55BCC70093FAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3EE70441E55BCC70093FAEC /* Assets.xcassets */; };
+		F3EE70481E55BCC70093FAEC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3EE70461E55BCC70093FAEC /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BE1F092057B409DD06F7EF6 /* Pods_OsxExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OsxExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		162C73161B789D6700226B47 /* RamblerModuleAlphaInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RamblerModuleAlphaInteractor.h; path = Viper/ModuleAlpha/RamblerModuleAlphaInteractor.h; sourceTree = "<group>"; };
 		162C73171B789D6700226B47 /* RamblerModuleAlphaInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RamblerModuleAlphaInteractor.m; path = Viper/ModuleAlpha/RamblerModuleAlphaInteractor.m; sourceTree = "<group>"; };
 		162C73181B789D6700226B47 /* RamblerModuleAlphaInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RamblerModuleAlphaInteractorInput.h; path = Viper/ModuleAlpha/RamblerModuleAlphaInteractorInput.h; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		429835301E2E835700DB54EC /* RamblerModuleGammaViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RamblerModuleGammaViewInput.h; sourceTree = "<group>"; };
 		429835311E2E835700DB54EC /* RamblerModuleGammaViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RamblerModuleGammaViewOutput.h; sourceTree = "<group>"; };
 		4298353B1E2E8FFE00DB54EC /* RamblerModuleGammaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RamblerModuleGammaViewController.xib; sourceTree = "<group>"; };
+		57E6F53CCBCAF4A729C9704E /* Pods-OsxExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OsxExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OsxExample/Pods-OsxExample.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ViperMcFlurry_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperMcFlurry_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,11 +127,19 @@
 		9DB79ED922F73E404786FD30 /* Pods-ViperMcFlurry_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperMcFlurry_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViperMcFlurry_Tests/Pods-ViperMcFlurry_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCD36FC03A45A87A4597C0C7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAB36AAE88EAE4784F1616E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C0610BE93FF6677E58A4D182 /* Pods-OsxExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OsxExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-OsxExample/Pods-OsxExample.release.xcconfig"; sourceTree = "<group>"; };
 		D24D49001BD1049400C77475 /* RamblerModuleBetaModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RamblerModuleBetaModuleAssembly.h; path = Viper/ModuleBeta/RamblerModuleBetaModuleAssembly.h; sourceTree = "<group>"; };
 		D24D49011BD1049400C77475 /* RamblerModuleBetaModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RamblerModuleBetaModuleAssembly.m; path = Viper/ModuleBeta/RamblerModuleBetaModuleAssembly.m; sourceTree = "<group>"; };
 		D24D49031BD1049E00C77475 /* RamblerModuleAlphaModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RamblerModuleAlphaModuleAssembly.h; path = Viper/ModuleAlpha/RamblerModuleAlphaModuleAssembly.h; sourceTree = "<group>"; };
 		D24D49041BD1049E00C77475 /* RamblerModuleAlphaModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RamblerModuleAlphaModuleAssembly.m; path = Viper/ModuleAlpha/RamblerModuleAlphaModuleAssembly.m; sourceTree = "<group>"; };
 		D24D49061BD4C9ED00C77475 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3EE703C1E55BCC70093FAEC /* OsxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EE703E1E55BCC70093FAEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3EE703F1E55BCC70093FAEC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3EE70421E55BCC70093FAEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3EE70441E55BCC70093FAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3EE70471E55BCC70093FAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F3EE70491E55BCC70093FAEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7BF77682AD97D2B0DE14324 /* Pods-ViperMcFlurry_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperMcFlurry_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperMcFlurry_Tests/Pods-ViperMcFlurry_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +162,14 @@
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
 				2F8EC9FE21353262E6D3028E /* Pods_ViperMcFlurry_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EE70391E55BCC70093FAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8321768C401D17B3ACF20E00 /* Pods_OsxExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +359,8 @@
 				29CC82345586C4F662E7C65C /* Pods-ViperMcFlurry_Example.release.xcconfig */,
 				9DB79ED922F73E404786FD30 /* Pods-ViperMcFlurry_Tests.debug.xcconfig */,
 				F7BF77682AD97D2B0DE14324 /* Pods-ViperMcFlurry_Tests.release.xcconfig */,
+				57E6F53CCBCAF4A729C9704E /* Pods-OsxExample.debug.xcconfig */,
+				C0610BE93FF6677E58A4D182 /* Pods-OsxExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -346,6 +371,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for ViperMcFlurry */,
 				6003F5B5195388D20070C39A /* Tests */,
+				F3EE703D1E55BCC70093FAEC /* OsxExample */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				4D62E5BDBFF12E6425C93A40 /* Pods */,
@@ -357,6 +383,7 @@
 			children = (
 				6003F58A195388D20070C39A /* ViperMcFlurry_Example.app */,
 				6003F5AE195388D20070C39A /* ViperMcFlurry_Tests.xctest */,
+				F3EE703C1E55BCC70093FAEC /* OsxExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,6 +398,7 @@
 				BCD36FC03A45A87A4597C0C7 /* libPods.a */,
 				8284984F2455D95519E1A3D9 /* Pods_ViperMcFlurry_Example.framework */,
 				3F6F5979FBF96E09EF139449 /* Pods_ViperMcFlurry_Tests.framework */,
+				0BE1F092057B409DD06F7EF6 /* Pods_OsxExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -437,6 +465,27 @@
 			name = Testing;
 			sourceTree = "<group>";
 		};
+		F3EE703D1E55BCC70093FAEC /* OsxExample */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE703E1E55BCC70093FAEC /* AppDelegate.h */,
+				F3EE703F1E55BCC70093FAEC /* AppDelegate.m */,
+				F3EE70441E55BCC70093FAEC /* Assets.xcassets */,
+				F3EE70461E55BCC70093FAEC /* MainMenu.xib */,
+				F3EE70491E55BCC70093FAEC /* Info.plist */,
+				F3EE70411E55BCC70093FAEC /* Supporting Files */,
+			);
+			path = OsxExample;
+			sourceTree = "<group>";
+		};
+		F3EE70411E55BCC70093FAEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3EE70421E55BCC70093FAEC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,6 +532,26 @@
 			productReference = 6003F5AE195388D20070C39A /* ViperMcFlurry_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F3EE703B1E55BCC70093FAEC /* OsxExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EE704C1E55BCC70093FAEC /* Build configuration list for PBXNativeTarget "OsxExample" */;
+			buildPhases = (
+				CFEA4C7A12D376CA08549970 /* [CP] Check Pods Manifest.lock */,
+				F3EE70381E55BCC70093FAEC /* Sources */,
+				F3EE70391E55BCC70093FAEC /* Frameworks */,
+				F3EE703A1E55BCC70093FAEC /* Resources */,
+				570789109534596217C96C16 /* [CP] Embed Pods Frameworks */,
+				F3B834E21B37373FCF962388 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OsxExample;
+			productName = OsxExample;
+			productReference = F3EE703C1E55BCC70093FAEC /* OsxExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -495,6 +564,11 @@
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					F3EE703B1E55BCC70093FAEC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JW3BQSLDU2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -513,6 +587,7 @@
 			targets = (
 				6003F589195388D20070C39A /* ViperMcFlurry_Example */,
 				6003F5AD195388D20070C39A /* ViperMcFlurry_Tests */,
+				F3EE703B1E55BCC70093FAEC /* OsxExample */,
 			);
 		};
 /* End PBXProject section */
@@ -535,6 +610,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EE703A1E55BCC70093FAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EE70451E55BCC70093FAEC /* Assets.xcassets in Resources */,
+				F3EE70481E55BCC70093FAEC /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +668,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperMcFlurry_Tests/Pods-ViperMcFlurry_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		570789109534596217C96C16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OsxExample/Pods-OsxExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5FB186E48B14A2189DA1EA83 /* [CP] Copy Pods Resources */ = {
@@ -661,6 +760,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperMcFlurry_Example/Pods-ViperMcFlurry_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CFEA4C7A12D376CA08549970 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B834E21B37373FCF962388 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OsxExample/Pods-OsxExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -695,6 +824,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3EE70381E55BCC70093FAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EE70431E55BCC70093FAEC /* main.m in Sources */,
+				F3EE70401E55BCC70093FAEC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -720,6 +858,14 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F3EE70461E55BCC70093FAEC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3EE70471E55BCC70093FAEC /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -879,6 +1025,60 @@
 			};
 			name = Release;
 		};
+		F3EE704A1E55BCC70093FAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57E6F53CCBCAF4A729C9704E /* Pods-OsxExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JW3BQSLDU2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = OsxExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.telepado.OsxExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3EE704B1E55BCC70093FAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0610BE93FF6677E58A4D182 /* Pods-OsxExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = JW3BQSLDU2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = OsxExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.telepado.OsxExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -908,6 +1108,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F3EE704C1E55BCC70093FAEC /* Build configuration list for PBXNativeTarget "OsxExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EE704A1E55BCC70093FAEC /* Debug */,
+				F3EE704B1E55BCC70093FAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

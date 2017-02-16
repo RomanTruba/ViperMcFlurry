@@ -5,7 +5,7 @@
 //  Copyright (c) 2015 Rambler DS. All rights reserved.
 //
 
-#import "UIViewController+RamblerViperModuleTransitionHandlerProtocol.h"
+#import "ViewController+RamblerViperModuleTransitionHandlerProtocol.h"
 #import <objc/runtime.h>
 #import "RamblerViperOpenModulePromise.h"
 #import "RamblerViperModuleFactory.h"
@@ -17,8 +17,7 @@ static IMP originalPrepareForSegueMethodImp;
 - (id)output;
 @end
 
-
-@implementation UIViewController (RamblerViperModuleTransitionHandlerProtocol)
+@implementation ViperMcFluryViewControllerClass (RamblerViperModuleTransitionHandlerProtocol)
 
 #pragma mark - RamblerViperModuleTransitionHandlerProtocol
 
@@ -73,6 +72,7 @@ static IMP originalPrepareForSegueMethodImp;
 }
 // Method removes/closes module
 - (void)closeCurrentModule:(BOOL)animated {
+#if TARGET_OS_IPHONE
     BOOL isInNavigationStack = [self.parentViewController isKindOfClass:[UINavigationController class]];
     BOOL hasManyControllersInStack = isInNavigationStack ? ((UINavigationController *)self.parentViewController).childViewControllers.count > 1 : NO;
 
@@ -87,6 +87,15 @@ static IMP originalPrepareForSegueMethodImp;
         [self removeFromParentViewController];
         [self.view removeFromSuperview];
     }
+#elif TARGET_OS_MAC
+    if (self.storyboard) {
+        [self dismissController:nil];
+    } else if (self.presentingViewController) {
+        [self.presentingViewController dismissViewController:self];
+    } else if (self.parentViewController) {
+        [self removeFromParentViewController];
+    }
+#endif
 }
 
 #pragma mark - PrepareForSegue swizzling
@@ -101,22 +110,38 @@ static IMP originalPrepareForSegueMethodImp;
     });
 }
 
-static UIViewController *sourceViewControllerFromSegue(UIStoryboardSegue * segue) {
+#if TARGET_OS_IPHONE || TARGET_OS_TV
+#define AppSegueRef UIStoryboardSegue*
+#define AppControllerRef UIViewController*
+#elif TARGET_OS_MAC
+#define AppSegueRef NSStoryboardSegue*
+#define AppControllerRef id
+#endif
+
+static AppControllerRef sourceViewControllerFromSegue(AppSegueRef segue) {
+#if TARGET_OS_IPHONE || TARGET_OS_TV
     return segue.sourceViewController;
+#elif TARGET_OS_MAC
+    return segue.sourceController;
+#endif
 }
 
-static UIViewController *destinationViewControllerFromSegue(UIStoryboardSegue * segue) {
-    UIViewController *destinationViewController = segue.destinationViewController;
+static AppControllerRef destinationViewControllerFromSegue(AppSegueRef segue) {
+#if TARGET_OS_IPHONE || TARGET_OS_TV
+    AppControllerRef destinationViewController = segue.destinationViewController;
     if ([destinationViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController *navigationController = destinationViewController;
         destinationViewController = navigationController.topViewController;
     }
     return destinationViewController;
+#elif TARGET_OS_MAC
+    return segue.destinationController;
+#endif
 }
 
-void RamblerViperPrepareForSegueSender(id self, SEL selector, UIStoryboardSegue * segue, id sender) {
+void RamblerViperPrepareForSegueSender(id self, SEL selector, AppSegueRef segue, id sender) {
 
-    ((void(*)(id,SEL,UIStoryboardSegue*,id))originalPrepareForSegueMethodImp)(self,selector,segue,sender);
+    ((void(*)(id,SEL,AppSegueRef,id))originalPrepareForSegueMethodImp)(self,selector,segue,sender);
 
     id<RamblerViperModuleInput> moduleInput = nil;
 
@@ -137,5 +162,8 @@ void RamblerViperPrepareForSegueSender(id self, SEL selector, UIStoryboardSegue 
         [moduleInput setModuleOutput:sourceOutput];
     }
 }
+
+#undef AppSegueClass
+#undef AppController
 
 @end

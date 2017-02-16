@@ -9,11 +9,11 @@
 #import "RamblerViperModuleFactory.h"
 
 @interface RamblerViperModuleFactory ()
+@property (nonatomic,strong) ViperMcFlurryModuleStoryboard *storyboard;
 
-@property (nonatomic,strong) UIStoryboard *storyboard;
 @property (nonatomic,strong) NSString* restorationId;
 
-@property (nonatomic,strong) id viewControllerLoader;
+@property (nonatomic,strong) id<RamblerViperModuleFactoryLoader> viewControllerLoader;
 @property (nonatomic,strong) NSString* viewControllerIdentifier;
 @property (nonatomic,copy) id<RamblerViperModuleTransitionHandlerProtocol>(^viewHandler)(void);
 
@@ -30,7 +30,8 @@
     return self;
 }
 
-- (instancetype)initWithStoryboard:(UIStoryboard*)storyboard andRestorationId:(NSString*)restorationId {
+
+- (instancetype)initWithStoryboard:(ViperMcFlurryModuleStoryboard*)storyboard andRestorationId:(NSString*)restorationId {
     self = [super init];
     if (self) {
         self.viewControllerLoader = storyboard;
@@ -53,17 +54,16 @@
     if (self.viewHandler) {
         return self.viewHandler();
     }
-    
-    NSAssert([self.viewControllerLoader respondsToSelector:@selector(instantiateViewControllerWithIdentifier:)], @"RamblerViperModuleFactory's view controller loader should respond to instantiateViewControllerWithIdentifier:");
-    
+
+    NSAssert([self.viewControllerLoader respondsToSelector:@selector(instantiateViewControllerWithIdentifier:)], @"RamblerViperModuleFactory's view controller loader should respond to instantiateViewControllerWithIdentifier:"); 
     id<RamblerViperModuleTransitionHandlerProtocol> destinationViewController = [self.viewControllerLoader instantiateViewControllerWithIdentifier:self.viewControllerIdentifier];
     return destinationViewController;
 }
 
 #pragma mark - Getters
 
-- (UIStoryboard *)storyboard {
-    return self.viewControllerLoader;
+- (ViperMcFlurryModuleStoryboard *)storyboard {
+    return [self.viewControllerLoader isKindOfClass:[ViperMcFlurryModuleStoryboard class]] ? self.viewControllerLoader : nil;
 }
 
 - (NSString *)restorationId {
@@ -71,3 +71,6 @@
 }
 
 @end
+
+#undef ViperModuleInstantiate
+#undef APPStoryboard
