@@ -2,22 +2,24 @@ source 'https://github.com/cocoapods/Specs.git'
 
 inhibit_all_warnings!
 use_frameworks!
-platform :osx, '10.8'
+
 
 def appPods
     pod "ViperMcFlurry", :path => "../ViperMcFlurry.podspec"
-    pod "Typhoon", '~> 4.0.0'
+    pod "Typhoon", :git => 'git@github.com:RomanTruba/Typhoon.git', :branch => 'mac-storyboard-support'
 end
 
 target 'ViperMcFlurry_Example' do
+    platform :ios, '8.0'
     appPods
 end
 
 target 'ViperMcFlurry_Tests' do
-    #platform :ios, '8.0'
+    platform :ios, '8.0'
     appPods
 end
 
 target 'OsxExample' do
+    platform :osx, '10.8'
     appPods
 end
